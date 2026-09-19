@@ -71,6 +71,7 @@ const Navbar = () => {
           </div>
 
           {/* Logo */}
+          
           <div className="flex items-center gap-2.5">
             <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-orange-50">
               <Image
@@ -81,10 +82,11 @@ const Navbar = () => {
                 className="object-contain"
               />
             </div>
-
+           <Link href="/" alt="Homepage" >
             <span className="text-xl font-bold tracking-tight text-slate-900 sm:text-2xl">
               Book<span className="text-orange-500">Vibe</span>
             </span>
+            </Link>
           </div>
         </div>
 
