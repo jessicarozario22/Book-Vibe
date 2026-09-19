@@ -1,5 +1,6 @@
 import Image from "next/image";
 import type { Book } from "../../../types/books";
+import Link from "next/link";
 
 type BookCardProps = {
   book: Book;
@@ -69,12 +70,13 @@ const BookCard = ({ book }: BookCardProps) => {
         </div>
 
         {/* Button */}
+       <Link href={'./books/${book.bookId}'}>
         <button
           type="button"
           className="mt-4 w-full rounded-xl bg-slate-900 px-4 py-3 text-sm font-semibold text-white transition duration-300 hover:bg-orange-500"
         >
           View Details
-        </button>
+        </button></Link>
 
       </div>
     </article>

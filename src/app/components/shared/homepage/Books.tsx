@@ -1,5 +1,6 @@
 import BookCard from "@/src/app/components/shared/BookCard";
 import type { Book } from "../../../types/books";
+import { IBook } from "@/src/types/book.type";
 
 const getBooks = async (): Promise<Book[]> => {
   const response = await fetch("http://localhost:3000/booksData.json", {
@@ -48,13 +49,10 @@ const Books = async () => {
         </div>
 
         {/* Books Grid */}
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {booksData.map((book) => (
-            <BookCard
-              key={book.bookId}
-              book={book}
-            />
-          ))}
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {booksData.slice(0, 9).map((book: IBook, ind: number) => {
+            return <BookCard key={ind} book={book} />; 
+          })}
         </div>
 
       </div>

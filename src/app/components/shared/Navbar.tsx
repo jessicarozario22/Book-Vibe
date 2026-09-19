@@ -2,6 +2,7 @@
 import Image from "next/image";
 import React from "react";
 import logo from "@/src/assets/book.ico";
+import Link from "next/link";
 
 const Navbar = () => {
   return (
@@ -40,7 +41,7 @@ const Navbar = () => {
               className="menu dropdown-content z-[1] mt-3 w-56 rounded-2xl border border-slate-200 bg-white p-3 shadow-xl"
             >
               <li>
-                <a className="rounded-xl font-medium">Home</a>
+                <Link href="/books" className="rounded-xl font-medium">Books</Link>
               </li>
 
               <li>
@@ -92,9 +93,9 @@ const Navbar = () => {
           <ul className="menu menu-horizontal items-center gap-2 px-1">
 
             <li>
-              <a className="rounded-xl font-medium text-slate-700 transition hover:bg-orange-50 hover:text-orange-500">
-                Home
-              </a>
+              <Link href="/books" className="rounded-xl font-medium text-slate-700 transition hover:bg-orange-50 hover:text-orange-500">
+               Books
+              </Link>
             </li>
 
             <li>
